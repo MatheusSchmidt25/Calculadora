@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculadora</title>
+        <link href="estilos/style.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <div class="calculadora">
+            <div class="conta" id="conta"></div>
+            <div class="resultado" id="resultado"></div>
+            <div><button class="um" onclick="inserir('1')">1</button></div>
+            <div><button class="dois" onclick="inserir('2')">2</button></div>
+            <div><button class="tres" onclick="inserir('3')">3</button></div>
+            <div><button class="quatro" onclick="inserir('4')">4</button></div>
+            <div><button class="cinco" onclick="inserir('5')">5</button></div>
+            <div><button class="seis" onclick="inserir('6')">6</button></div>
+            <div><button class="sete" onclick="inserir('7')">7</button></div>
+            <div><button class="oito" onclick="inserir('8')">8</button></div>
+            <div><button class="nove" onclick="inserir('9')">9</button></div>
+            <div><button class="zero" onclick="inserir('0')">0</button></div>
+            <div><button class="vezes" onclick="inserir('*')">×</button></div>
+            <div><button class="dividir" onclick="inserir('/')">÷</button></div>
+            <div><button class="mais" onclick="inserir('+')">+</button></div>
+            <div><button class="menos" onclick="inserir('-')">-</button></div>
+            <div><button class="ponto" onclick="inserir('.')">,</button></div>
+            <div><button class="igual" onclick="calcular()">=</button></div>
+            <div><button class="apagarTudo" onclick="apagarTudo()">CE</button></div>
+            <div><button class="apagar" onclick="apagar()">C</button></div>
+            <div><button class="porcento" onclick="inserir('%')">%</button></div>
+            <div class="modo"><input type="checkbox" id="modo"><label for="modo"></label></div>
+        </div>
+    </body>
+<script src="script/script.js"></script>
+</html>

@@ -1,0 +1,262 @@
+:root{
+    --body-bg: #e0e0e0;
+    --calculadora-bg: #eaeff0;
+    --texto-conta: #4e545c;
+    --texto: #2e343b;
+    --sombra-escura: #d9dedf;
+    --sombra-clara: #f4fafc;
+    --texto-hover: #272d33;
+    --botoes-bg-hover: #f2f7f8;
+    --cor-diferencial: #769FCD;
+    --cor-diferencial-hover: #84acda;
+    --texto-igual-hover: #2e353d;
+}
+
+.dark-mode:root{
+    --body-bg: #393E46;
+    --calculadora-bg: #222831;
+    --texto-conta: #9c9c9c;
+    --texto: #EEEEEE;
+    --sombra-escura: #1b2027;
+    --sombra-clara: #2a313b;
+    --texto-hover: #ffffff;
+    --botoes-bg-hover: #262d36;
+    --cor-diferencial: #FFD369;
+    --cor-diferencial-hover: #ffd676;
+    --texto-igual-hover: #252b33;
+}
+
+body{
+    font-family: 'Abel', sans-serif;
+    background-color: var(--body-bg);
+}
+
+.calculadora{
+    position: absolute;
+    width: 470px;
+    height: 610px;
+    left: 35%;
+    top: 10%;
+    color: var(--calculadora-bg);
+    border: 3px;
+    background-color: var(--calculadora-bg);
+    border-radius: 10px;
+    top: 10%;
+    box-shadow: 3px 3px 4px var(--sombra-escura), -3px -3px 4px var(--sombra-clara);
+}
+
+.conta{
+    width: 410px;
+    height: 40px;
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    background-color: transparent;
+    font-size: 25px;
+    border-radius: 10px;
+    color: var(--texto-conta);
+    text-align: right;
+}
+
+.resultado{
+    width: 410px;
+    height: 70px;
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    background-color: transparent;
+    font-size: 50px;
+    border-radius: 10px;
+    color: var(--texto);
+    text-align: right;
+}
+
+.zero, .um, .dois, .tres, .quatro, .cinco, .seis, .sete, .oito, .nove, .mais, .menos, .ponto, .dividir, .vezes, .porcento, .apagar, .apagarTudo{
+    width: 100px;
+    height: 80px;
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    color: var(--texto);
+    border: transparent;
+    background: var(--calculadora-bg);
+    box-shadow: 2px 2px 4px var(--sombra-escura), -2px -2px 4px var(--sombra-clara);
+    font-family: 'Abel', sans-serif;
+  
+}
+
+.zero:hover, .um:hover, .dois:hover, .tres:hover, .quatro:hover, .cinco:hover, .seis:hover, .sete:hover, .oito:hover, .nove:hover, .mais:hover, .menos:hover, .ponto:hover, .dividir:hover, .vezes:hover, .porcento:hover, .apagar:hover, .apagarTudo:hover{
+    transform: scale(1.05);
+    color: var(--texto-hover);
+    background: var(--botoes-bg-hover);
+    cursor: pointer;
+}
+
+.apagarTudo{
+    top: 150px;
+    left: 20px;
+}
+
+.apagar{
+    top: 150px;
+    left: 130px;
+}
+
+.porcento{
+    top: 150px;
+    left: 240px;
+}
+
+.dividir{
+    top: 150px;
+    left: 350px;
+}
+
+.sete{
+    top: 240px;
+    left: 20px;
+}
+
+.oito{
+    top: 240px;
+    left: 130px;
+}
+
+.nove{
+    top: 240px;
+    left: 240px;
+}
+
+.vezes{
+    top: 240px;
+    left: 350px;
+}
+
+.quatro{
+    top: 330px;
+    left: 20px;
+}
+
+.cinco{
+    top: 330px;
+    left: 130px;
+}
+
+.seis{
+    top: 330px;
+    left: 240px;
+}
+
+.menos{
+    top: 330px;
+    left: 350px;
+}
+
+.um{
+    top: 420px;
+    left: 20px;
+}
+
+.dois{
+    top: 420px;
+    left: 130px;
+}
+
+.tres{
+    top: 420px;
+    left: 240px;
+}
+
+.mais{
+    top: 420px;
+    left: 350px;
+}
+
+input[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+label{ 
+    top: -21px;
+    cursor: pointer;
+    width: 100px;
+    height: 80px;
+    background: var(--calculadora-bg);
+    display: block;
+    position: relative;
+    border-radius: 10px;
+}
+
+label:after{
+    cursor: pointer;
+    width: 45px;
+    height: 76px;
+    background: var(--cor-diferencial);
+    position: absolute;
+    transition: 0.3s;
+    content: '';
+    top: 2px;
+    left: 2px;
+    border-radius: 10px;
+}
+
+input:checked + label{
+    background: var(--calculadora-bg);
+}
+
+input:checked + label:after{
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+    background: var(--cor-diferencial);
+}
+
+label:active:after{
+    width: 130px;
+}
+
+.modo{
+    position: absolute;
+    width: 100px;
+    height: 80px;
+    border: transparent;
+    border-radius: 10px;
+    top: 510px;
+    left: 20px;
+    box-shadow: 2px 2px 4px var(--sombra-escura), -2px -2px 4px var(--sombra-clara);
+}
+
+.zero{
+    top: 510px;
+    left: 130px;
+}
+
+.ponto{
+    top: 510px;
+    left: 240px;
+}
+
+.igual{
+    width: 100px;
+    height: 80px;
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    top: 510px;
+    left: 350px;
+    border-radius: 10px;
+    color: var(--calculadora-bg);
+    border: transparent;
+    background: var(--cor-diferencial);
+    box-shadow: 2px 2px 4px var(--sombra-escura), -2px -2px 4px var(--sombra-clara);
+    font-family: 'Abel', sans-serif;
+}
+
+.igual:hover{
+    transform: scale(1.05);
+    color: var(--texto-igual-hover);
+    background: var(--cor-diferencial-hover);
+    cursor: pointer;
+}
